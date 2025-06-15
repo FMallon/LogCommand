@@ -12,7 +12,7 @@ Usage (where alias of script is set to 'logcom':
 
   1) logcom "sudo blkdiscard $DISK_NAME" | sudo tee -a /log/logfile.log
 
-     or even better, using LogAppend:
+or even better, using LogAppend:
 
   1) log --begin /log/logfile.log
   2) logcom "sudo blkdiscard $DISK_NAME" | log -a /logfile.log
