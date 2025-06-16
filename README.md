@@ -12,14 +12,14 @@ Usage (where alias of script is set to 'logcom':
 
   1) logcom "sudo blkdiscard $DISK_NAME" | sudo tee -a /log/logfile.log
 
-or even better, using LogAppend(https://github.com/FMallon/LogAppend):
+or even better, using LogAppend (https://github.com/FMallon/LogAppend):
 
   1) log --begin /log/logfile.log
   2) logcom "sudo blkdiscard $DISK_NAME" | log -a /log/logfile.log
   3) log --end /log/logfile.log
 
 
-This will output the command, its output, and exit status to a logfile.  If the command doesn't output to the terminal as the one above, LogCommand will log success or failure based of the exit status.
+This will output the command, its output, and exit status to a logfile.  If the command doesn't output to the terminal as the one above, LogCommand will log success or failure based-off the exit status.
 
 This script was made because I was sanitizing disks that I needed to log, and nvme-cli and blkdiscard do not throw output upon running - output that I needed to prove that these commands have been successfully ran.  This script aids to mitigate that.
 
