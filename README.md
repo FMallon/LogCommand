@@ -8,7 +8,7 @@ This script is especially better when used with https://github.com/FMallon/LogAp
 
 Although, one could use 'sudo tee -a' also, or whatever.
 
-Usage (where alias of script is set to 'logcom':
+Usage (where alias of script is set to 'logcom'):
 
   1) logcom "sudo blkdiscard $DISK_NAME" | sudo tee -a /log/logfile.log
 
