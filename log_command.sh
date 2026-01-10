@@ -41,7 +41,7 @@ function clear_space(){
 }
 
 
-function main(){
+function main_log_command(){
 
 
   execute_command
@@ -50,4 +50,4 @@ function main(){
 
 }
 
-main $@
+main_log_command $@
