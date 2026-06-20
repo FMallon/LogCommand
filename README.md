@@ -22,9 +22,9 @@ Initially this was one of a few scripts I wrote quickly for an old job I had whe
 
 The initial release worked to do what I needed, however, it used eval which is a big no-no, and I have learned a lot since then, thus decided to re-write the script from scratch.
 
-Initially I said no Eval, and I have kept to that. I decided to add the -c option to replicate the previous shell-based behaviour. Instead of eval, I use $SHELL -c '<command>' when shell interpretation is explicitly requested. The behaviour is similar, but the execution path is now deliberate - $SHELL being your default login shell. 
+Initially I said no Eval, and I have kept to that. I decided to add the -c option to replicate the previous shell-based behaviour. Instead of eval, I use $SHELL -c '\<command\>' when shell interpretation is explicitly requested. The behaviour is similar, but the execution path is now deliberate - $SHELL being your default login shell. 
 
-I actually wrote this out many times and changed back-and-forth.  I decided to add logcom '<Command>' to function as before so as to not break existing workflows, however, I ultimately opted-out of this at the last minute - the reason being, what if the User does 'logcom !!' or 'logcom <wrong flag>'.
+I actually wrote this out many times and changed back-and-forth.  I decided to add logcom '\<Command\>' to function as before so as to not break existing workflows, however, I ultimately opted-out of this at the last minute - the reason being, what if the User does 'logcom !!' or 'logcom \<wrong flag\>'.
 
 This would be very unsecure, so older workflows will require a '-c' to function - just as an extra safety layer.
 
@@ -98,9 +98,9 @@ E.g:
 logcom -c 'echo "hello world" | grep -o "hello"' | tee log.file
 ```
 
-Just think of this way as sh -c '<args>'
+Just think of this way as sh -c '\<args\>'
 
-Note that if you use '<Command 1>; <Command 2>', and the second succeeds, the tool will imply success, even if the first fails.  
+Note that if you use '\<Command 1\>; \<Command 2\>', and the second succeeds, the tool will imply success, even if the first fails.  
 The tool isn't really meant to be used in this way... but you can do whatever you want!  
 
 ---
