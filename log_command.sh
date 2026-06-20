@@ -226,7 +226,7 @@ usage(){
 
         Usage:
 
-            -> logcom -c 'echo "hello world" | grep "hello"'
+            -> logcom -c 'echo \"hello world\" | grep \"hello\"'
 
 
 
